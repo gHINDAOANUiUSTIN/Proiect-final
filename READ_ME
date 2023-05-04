@@ -1,0 +1,62 @@
+MENTIONAM CA ACESTE TESTE RULEAZA PE SISTEMELE WINDOWS PE 64 DE BITI. DE ASEMENEA, ESTE IMPORTANT SA VERIFICATI
+DACA VERSIUNILE FOLOSITE ATAT DE PYTHON CAT SI ALE LIBRARIILOR NECESARE SUNT COMPATIBILE CU SISTEMUL UTILIZAT
+Intructiuni pentru pregatirea sistemului Windows inainte de rularea testelor:
+
+-> Asigura-te ca ai instalat:
+
+ 1) Google Chrome
+https://www.google.com/chrome/thank-you.html?brand=YTUH&statcb=1&installdataindex=empty&defaultbrowser=0
+
+ 2) Python 3.11.2
+https://www.python.org/downloads/
+    Optiuni instalare aditionale necesare:
+    * Add python.exe to PATH
+
+ 3) PowerShell-7.3.3-win-x64.zip:
+https://github.com/PowerShell/PowerShell/releases/download/v7.3.3/PowerShell-7.3.3-win-x64.msi
+    Optiuni instalare aditionale necesare:
+    * Add PowerShell to Path Envirnoment Variable
+    * Enable PowerShell remoting
+
+ 4) Pachetele/librariile necesare (dependentele):
+
+    # Pentru instalarea librariilor, vom folosi urmatoarele comenzi in terminalul PowerShell 7:
+
+      > behave
+pip install behave~=1.2.6
+
+      > behave-html-formatter
+pip install behave-html-formatter~=0.9.10
+
+      > selenium~=4.8.2
+pip install selenium~=4.8.2
+
+      >webdriver-manager~=3.8.5
+pip install webdriver-manager==3.8.5
+
+Intsructiuni rulare teste si generare raport:
+
+->Deschide terminalul PowerShell 7
+->Navighează la directorul unde se află proiectul BDD folosind comanda cd "Calea\catre\proiectul\BDD".
+Exemplu: cd "C:\User\Iustin\Documents\BDD_Proiect_Final_Elefant"
+->Dupa validarea directorului, introdu una din urmatoarele comenzi de rulare:
+
+IMPORTANT: Dupa rularea testelor functionalitatii de stergere a contului, tesetele pentru functionalitatea de login/logout
+           vor esua, deoarece user-ul si parola folosite pentru logare vor fi sterse
+
+OBSERVATIE: Dupa rularea testelor, pentru a vedea raportul generat se va folosi comanda
+start behave-report.html
+   - Aceasta comanda va deschide raportul in software-ul prestabilit de sistem (de regula browser-ul implicit)
+
+Comenzi rulare:
+ I) Comanda rulare teste pentru functionalitatea login-logout
+python -m behave features/login.feature -f html -o behave-report.html
+
+ II) Comanda rulare teste pentru functionalitatea de cautare
+python -m behave features/search.feature -f html -o behave-report.html
+
+ III) Comanda rulare teste pentru functionalitatea cosului de cumparaturi
+python -m behave features/cart.feature -f html -o behave-report.html
+
+ IV) Comanda rulare teste pentru functionalitatea de stergere a contului
+python -m behave features/delete_account.feature -f html -o behave-report.html

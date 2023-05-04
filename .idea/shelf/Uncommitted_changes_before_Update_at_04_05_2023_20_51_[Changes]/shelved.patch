@@ -1,0 +1,237 @@
+Index: Read me.txt
+===================================================================
+diff --git a/Read me.txt b/Read me.txt
+deleted file mode 100644
+--- a/Read me.txt	(revision e4d10c1bf39eef705c6499f125eb5c3f5212c1fa)
++++ /dev/null	(revision e4d10c1bf39eef705c6499f125eb5c3f5212c1fa)
+@@ -1,62 +0,0 @@
+-MENTIONAM CA ACESTE TESTE RULEAZA PE SISTEMELE WINDOWS PE 64 DE BITI. DE ASEMENEA, ESTE IMPORTANT SA VERIFICATI
+-DACA VERSIUNILE FOLOSITE ATAT DE PYTHON CAT SI ALE LIBRARIILOR NECESARE SUNT COMPATIBILE CU SISTEMUL UTILIZAT
+-Intructiuni pentru pregatirea sistemului Windows inainte de rularea testelor:
+-
+--> Asigura-te ca ai instalat:
+-
+- 1) Google Chrome
+-https://www.google.com/chrome/thank-you.html?brand=YTUH&statcb=1&installdataindex=empty&defaultbrowser=0
+-
+- 2) Python 3.11.2
+-https://www.python.org/downloads/
+-    Optiuni instalare aditionale necesare:
+-    * Add python.exe to PATH
+-
+- 3) PowerShell-7.3.3-win-x64.zip:
+-https://github.com/PowerShell/PowerShell/releases/download/v7.3.3/PowerShell-7.3.3-win-x64.msi
+-    Optiuni instalare aditionale necesare:
+-    * Add PowerShell to Path Envirnoment Variable
+-    * Enable PowerShell remoting
+-
+- 4) Pachetele/librariile necesare (dependentele):
+-
+-    # Pentru instalarea librariilor, vom folosi urmatoarele comenzi in terminalul PowerShell 7:
+-
+-      > behave
+-pip install behave~=1.2.6
+-
+-      > behave-html-formatter
+-pip install behave-html-formatter~=0.9.10
+-
+-      > selenium~=4.8.2
+-pip install selenium~=4.8.2
+-
+-      >webdriver-manager~=3.8.5
+-pip install webdriver-manager==3.8.5
+-
+-Intsructiuni rulare teste si generare raport:
+-
+-->Deschide terminalul PowerShell 7
+-->Navighează la directorul unde se află proiectul BDD folosind comanda cd "Calea\catre\proiectul\BDD".
+-Exemplu: cd "C:\User\Iustin\Documents\BDD_Proiect_Final_Elefant"
+-->Dupa validarea directorului, introdu una din urmatoarele comenzi de rulare:
+-
+-IMPORTANT: Dupa rularea testelor functionalitatii de stergere a contului, tesetele pentru functionalitatea de login/logout
+-           vor esua, deoarece user-ul si parola folosite pentru logare vor fi sterse
+-
+-OBSERVATIE: Dupa rularea testelor, pentru a vedea raportul generat se va folosi comanda
+-start behave-report.html
+-   - Aceasta comanda va deschide raportul in software-ul prestabilit de sistem (de regula browser-ul implicit)
+-
+-Comenzi rulare:
+- I) Comanda rulare teste pentru functionalitatea login-logout
+-python -m behave features/login.feature -f html -o behave-report.html
+-
+- II) Comanda rulare teste pentru functionalitatea de cautare
+-python -m behave features/search.feature -f html -o behave-report.html
+-
+- III) Comanda rulare teste pentru functionalitatea cosului de cumparaturi
+-python -m behave features/cart.feature -f html -o behave-report.html
+-
+- IV) Comanda rulare teste pentru functionalitatea de stergere a contului
+-python -m behave features/delete_account.feature -f html -o behave-report.html
+\ No newline at end of file
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.name b/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1681289963299)
++++ b/.idea/.name	(date 1681289963299)
+@@ -0,0 +1,1 @@
++environment.py
+\ No newline at end of file
+Index: .idea/runConfigurations/Project1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/Project1.xml b/.idea/runConfigurations/Project1.xml
+new file mode 100644
+--- /dev/null	(date 1680999599652)
++++ b/.idea/runConfigurations/Project1.xml	(date 1680999599652)
+@@ -0,0 +1,24 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="false" name="Project1" type="PythonConfigurationType" factoryName="Python" singleton="false">
++    <module name="BDD_Proiect_Final_Elefant" />
++    <option name="INTERPRETER_OPTIONS" value="" />
++    <option name="PARENT_ENVS" value="true" />
++    <envs>
++      <env name="PYTHONUNBUFFERED" value="1" />
++    </envs>
++    <option name="SDK_HOME" value="$PROJECT_DIR$/venv/Scripts/python.exe" />
++    <option name="SDK_NAME" value="Python 3.12 (BDD_Proiect_Final_Elefant)" />
++    <option name="WORKING_DIRECTORY" value="" />
++    <option name="IS_MODULE_SDK" value="false" />
++    <option name="ADD_CONTENT_ROOTS" value="true" />
++    <option name="ADD_SOURCE_ROOTS" value="true" />
++    <option name="SCRIPT_NAME" value="" />
++    <option name="PARAMETERS" value="" />
++    <option name="SHOW_COMMAND_LINE" value="true" />
++    <option name="EMULATE_TERMINAL" value="false" />
++    <option name="MODULE_MODE" value="false" />
++    <option name="REDIRECT_INPUT" value="false" />
++    <option name="INPUT_FILE" value="" />
++    <method v="2" />
++  </configuration>
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1681298681973)
++++ b/.idea/misc.xml	(date 1681298681973)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (BDD_Proiect_Final_Elefant) (2)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1680775325268)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1680775325268)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1680775031072)
++++ b/.idea/.gitignore	(date 1680775031072)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1680775325244)
++++ b/.idea/vcs.xml	(date 1680775325244)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1680775325160)
++++ b/.idea/modules.xml	(date 1680775325160)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/BDD_Proiect_Final_Elefant.iml" filepath="$PROJECT_DIR$/.idea/BDD_Proiect_Final_Elefant.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: behave-report.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE HTML><html><head><title>Behave Test Report</title><meta content=\"text/html;charset=utf-8\" http-equiv=\"content-type\" /><style type=\"text/css\"><!--\r\n@charset \"utf-8\"; .passed{}.failed{}.error{}.skipped{}.undefined{}.summary{}.failed_scenarios{}.footer{}body{font-size:0;color:white;margin:0;padding:0}.behave,td,th{font:normal 11px \"Lucida Grande\",Helvetica,sans-serif;background:white;color:black}.behave #behave-header,td #behave-header,th #behave-header{background:#65c400;color:white;height:8em}.behave #behave-header #expand-collapse p,td #behave-header #expand-collapse p,th #behave-header #expand-collapse p{float:right;margin:0 0 0 10px}.behave .scenario h3,td .scenario h3,th .scenario h3,.background h3{font-size:11px;padding:3px;margin:0;background:#65c400;color:white;font-weight:bold}.background h3{font-size:1.2em;background:#666}.behave h1,td h1,th h1{margin:0 10px 0 10px;padding:10px;font-family:\"Lucida Grande\",Helvetica,sans-serif;font-size:2em;position:absolute}.behave h4,td h4,th h4{margin-bottom:2px}.behave div.feature,td div.feature,th div.feature{padding:2px;margin:0 10px 5px 10px}.behave div.examples,td div.examples,th div.examples{padding:0 0 0 1em}.behave .stats,td .stats,th .stats{margin:2em}.behave .summary ul.features li,td .summary ul.features li,th .summary ul.features li{display:inline}.behave .step_name,td .step_name,th .step_name{float:left}.behave .step_file,td .step_file,th .step_file{text-align:right;color:#999}.behave .step_file a,td .step_file a,th .step_file a{color:#999}.behave .scenario_file,td .scenario_file,th .scenario_file{float:right;color:#999}.behave .step_duration{padding-left:1em}.behave .tag,td .tag,th .tag{font-weight:bold;color:#246ac1}.behave .backtrace,td .backtrace,th .backtrace{margin-top:0;margin-bottom:0;margin-left:1em;color:black}.behave a,td a,th a{color:#be5c00;margin-right:.5em}.behave a:hover,td a:hover,th a:hover{text-decoration:none}.behave a:visited,td a:visited,th a:visited{font-weight:normal}.behave a div.examples,td a div.examples,th a div.examples{margin:5px 0 5px 15px;color:black}.behave .outline table,td .outline table,th .outline table{margin:0 0 5px 10px}.behave table,td table,th table{border-collapse:collapse}.behave table td,td table td,th table td{padding:3px 3px 3px 5px}.behave table td.failed,.behave table td.passed,.behave table td.skipped,.behave table td.pending,.behave table td.undefined,td table td.failed,td table td.passed,td table td.skipped,td table td.pending{padding-left:18px;padding-right:10px}.behave table td.failed,td table td.failed,th table td.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave table td.passed,td table td.passed,th table td.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave table td.skipped,td table td.skipped,th table td.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave table td.pending,td table td.pending,th table td.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.undefined,td table td.undefined,th table td.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.message,td table td.message,th table td.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol,td ol,th ol{list-style:none;margin:0;padding:0}.behave ol li.step,td ol li.step,th ol li.step{padding:3px 3px 3px 18px;margin:5px 0 5px 5px}.behave ol li,td ol li,th ol li{margin:0 0 0 1em;padding:0 0 0 .2em}.behave ol li span.param,td ol li span.param,th ol li span.param{font-weight:bold}.behave ol li.failed,td ol li.failed,th ol li.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave ol li.passed,td ol li.passed,th ol li.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave ol li.skipped,td ol li.skipped,th ol li.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol li.pending,td ol li.pending,th ol li.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.undefined,td ol li.undefined,th ol li.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.message,td ol li.message,th ol li.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011;margin-left:10px}.behave #summary,td #summary,th #summary{margin:0;padding:5px 10px;text-align:right;top:0;right:0;float:right}.behave #summary p,td #summary p,th #summary p{margin:0 0 0 2px}.behave #summary #totals,td #summary #totals,th #summary #totals{font-size:1.2em}.behave .scenario h3.failed,td .scenario h3.failed,th .scenario h3.failed,.background h3.failed{background:#c20000}.behave #behave-header.failed,td #behave-header.failed,th #behave-header.failed{background:#c20000}.behave .scenario h3.undefined,td .scenario h3.undefined,th .scenario h3.undefined,.background h3.undefined{background:#faf834;color:black}.behave #behave-header.undefined,td #behave-header.undefined,th #behave-header.undefined{background:#faf834;color:black}#behave-header.failed a{color:white}pre{white-space:pre-wrap}\r\n--></style><script type=\"text/javascript\"><!--\r\nfunction Collapsible_toggle(id){var elem=document.getElementById(id);elem.style.display=(elem.style.display=='none'?'block':'none');return false;};function Collapsible_expandAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='block';}};function Collapsible_collapseAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='none';}};function Collapsible_expandAllFailed(){var elems=document.getElementsByClassName('failed');for(var i=0;i<elems.length;i++){var elem=elems[i];if(elem.nodeName=='H3'){elem.parentElement.getElementsByTagName('ol')[0].style.display='block';}}}\r\n--></script></head><body><div class=\"behave\"><div id=\"behave-header\"><div id=\"label\"><h1>Behave Test Report</h1></div><div id=\"summary\"><p id=\"totals\"><p id=\"feature_totals\">Features: passed: 1</p><p id=\"scenario_totals\">Scenarios: passed: 2</p><p id=\"step_totals\">Steps: passed: 5, untested: 4</p></p><p id=\"duration\">Finished in 43.1 seconds</p><div id=\"expand-collapse\"><a id=\"expander\" href=\"#\" onclick=\"Collapsible_expandAll('scenario_steps')\">Expand All</a><span> | </span><a id=\"collapser\" href=\"#\" onclick=\"Collapsible_collapseAll('scenario_steps')\">Collapse All</a><span> | </span><a id=\"failed_expander\" href=\"#\" onclick=\"Collapsible_expandAllFailed()\">Expand All Failed</a></div></div></div><div class=\"feature\"><h2><span class=\"val\">Feature: We want to check the search functionality on elefant</span></h2><span /></div><div class=\"scenario\"><span class=\"scenario_file\">features/search.feature:3</span><h3 onclick=\"Collapsible_toggle('scenario_0')\"><span class=\"val\">Scenario: Check if user can explore the products using the filters from elefant homepage</span></h3><ol class=\"scenario_steps\" id=\"scenario_0\"><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Given </span><span class=\"step val\">Home page: The user is on elefant home page</span><small class=\"step_duration\">(3.454s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user select books from category menu</span><small class=\"step_duration\">(0.755s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:25</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user select fiction from genres</span><small class=\"step_duration\">(0.687s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:30</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Filters page: The user select 15% - 30% from discount</span><small class=\"step_duration\">(11.082s)</small></div><div class=\"step_file\"><span>steps/filters_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Then </span><span class=\"step val\">Filters page: The user should receive a list with at least 1000 products</span><small class=\"step_duration\">(0.190s)</small></div><div class=\"step_file\"><span>steps/filters_page_steps.py:9</span></div><span class=\"embed\" /></li></ol><span /></div><div class=\"scenario\"><span class=\"scenario_file\">features/search.feature:17</span><h3 onclick=\"Collapsible_toggle('scenario_1')\"><span class=\"val\">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.1 </span></h3><ol class=\"scenario_steps\" id=\"scenario_1\"><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Given </span><span class=\"step val\">Home page: The user is on elefant home page</span><small class=\"step_duration\">(5.566s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\"><span>Home page: The user types in the search bar \"</span><b>Cartea Rosie</b><span>\"</span></span><small class=\"step_duration\">(0.078s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:35</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user clicks the search button</span><small class=\"step_duration\">(0.551s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:40</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Then </span><span class=\"step val\">Search page: The user should receive as the first result the searched product</span><small class=\"step_duration\">(0.773s)</small></div><div class=\"step_file\"><span>steps/search_page_steps.py:4</span></div><span class=\"embed\" /></li></ol><span /></div><div class=\"scenario\"><span class=\"scenario_file\">features/search.feature:18</span><h3 onclick=\"Collapsible_toggle('scenario_2')\"><span class=\"val\">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.2 </span></h3><ol class=\"scenario_steps\" id=\"scenario_2\"><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Given </span><span class=\"step val\">Home page: The user is on elefant home page</span><small class=\"step_duration\">(5.490s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\"><span>Home page: The user types in the search bar \"</span><b>Alchimistul</b><span>\"</span></span><small class=\"step_duration\">(0.087s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:35</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user clicks the search button</span><small class=\"step_duration\">(0.478s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:40</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Then </span><span class=\"step val\">Search page: The user should receive as the first result the searched product</span><small class=\"step_duration\">(0.573s)</small></div><div class=\"step_file\"><span>steps/search_page_steps.py:4</span></div><span class=\"embed\" /></li></ol><span /></div><div class=\"scenario\"><span class=\"scenario_file\">features/search.feature:19</span><h3 onclick=\"Collapsible_toggle('scenario_3')\"><span class=\"val\">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.3 </span></h3><ol class=\"scenario_steps\" id=\"scenario_3\"><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Given </span><span class=\"step val\">Home page: The user is on elefant home page</span><small class=\"step_duration\">(5.499s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\"><span>Home page: The user types in the search bar \"</span><b>Crima si pedeapsa</b><span>\"</span></span><small class=\"step_duration\">(0.120s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:35</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user clicks the search button</span><small class=\"step_duration\">(0.481s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:40</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Then </span><span class=\"step val\">Search page: The user should receive as the first result the searched product</span><small class=\"step_duration\">(0.651s)</small></div><div class=\"step_file\"><span>steps/search_page_steps.py:4</span></div><span class=\"embed\" /></li></ol><span /></div><div class=\"scenario\"><span class=\"scenario_file\">features/search.feature:20</span><h3 onclick=\"Collapsible_toggle('scenario_4')\"><span class=\"val\">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.4 </span></h3><ol class=\"scenario_steps\" id=\"scenario_4\"><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Given </span><span class=\"step val\">Home page: The user is on elefant home page</span><small class=\"step_duration\">(5.488s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:4</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\"><span>Home page: The user types in the search bar \"</span><b>Moara cu noroc</b><span>\"</span></span><small class=\"step_duration\">(0.115s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:35</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">When </span><span class=\"step val\">Home page: The user clicks the search button</span><small class=\"step_duration\">(0.483s)</small></div><div class=\"step_file\"><span>steps/home_page_steps.py:40</span></div><span class=\"embed\" /></li><li class=\"step passed\"><div class=\"step_name\"><span class=\"keyword\">Then </span><span class=\"step val\">Search page: The user should receive as the first result the searched product</span><small class=\"step_duration\">(0.534s)</small></div><div class=\"step_file\"><span>steps/search_page_steps.py:4</span></div><span class=\"embed\" /></li></ol><span /></div></div></body></html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/behave-report.html b/behave-report.html
+--- a/behave-report.html	(revision e4d10c1bf39eef705c6499f125eb5c3f5212c1fa)
++++ b/behave-report.html	(date 1683218828479)
+@@ -2,4 +2,4 @@
+ @charset "utf-8"; .passed{}.failed{}.error{}.skipped{}.undefined{}.summary{}.failed_scenarios{}.footer{}body{font-size:0;color:white;margin:0;padding:0}.behave,td,th{font:normal 11px "Lucida Grande",Helvetica,sans-serif;background:white;color:black}.behave #behave-header,td #behave-header,th #behave-header{background:#65c400;color:white;height:8em}.behave #behave-header #expand-collapse p,td #behave-header #expand-collapse p,th #behave-header #expand-collapse p{float:right;margin:0 0 0 10px}.behave .scenario h3,td .scenario h3,th .scenario h3,.background h3{font-size:11px;padding:3px;margin:0;background:#65c400;color:white;font-weight:bold}.background h3{font-size:1.2em;background:#666}.behave h1,td h1,th h1{margin:0 10px 0 10px;padding:10px;font-family:"Lucida Grande",Helvetica,sans-serif;font-size:2em;position:absolute}.behave h4,td h4,th h4{margin-bottom:2px}.behave div.feature,td div.feature,th div.feature{padding:2px;margin:0 10px 5px 10px}.behave div.examples,td div.examples,th div.examples{padding:0 0 0 1em}.behave .stats,td .stats,th .stats{margin:2em}.behave .summary ul.features li,td .summary ul.features li,th .summary ul.features li{display:inline}.behave .step_name,td .step_name,th .step_name{float:left}.behave .step_file,td .step_file,th .step_file{text-align:right;color:#999}.behave .step_file a,td .step_file a,th .step_file a{color:#999}.behave .scenario_file,td .scenario_file,th .scenario_file{float:right;color:#999}.behave .step_duration{padding-left:1em}.behave .tag,td .tag,th .tag{font-weight:bold;color:#246ac1}.behave .backtrace,td .backtrace,th .backtrace{margin-top:0;margin-bottom:0;margin-left:1em;color:black}.behave a,td a,th a{color:#be5c00;margin-right:.5em}.behave a:hover,td a:hover,th a:hover{text-decoration:none}.behave a:visited,td a:visited,th a:visited{font-weight:normal}.behave a div.examples,td a div.examples,th a div.examples{margin:5px 0 5px 15px;color:black}.behave .outline table,td .outline table,th .outline table{margin:0 0 5px 10px}.behave table,td table,th table{border-collapse:collapse}.behave table td,td table td,th table td{padding:3px 3px 3px 5px}.behave table td.failed,.behave table td.passed,.behave table td.skipped,.behave table td.pending,.behave table td.undefined,td table td.failed,td table td.passed,td table td.skipped,td table td.pending{padding-left:18px;padding-right:10px}.behave table td.failed,td table td.failed,th table td.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave table td.passed,td table td.passed,th table td.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave table td.skipped,td table td.skipped,th table td.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave table td.pending,td table td.pending,th table td.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.undefined,td table td.undefined,th table td.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.message,td table td.message,th table td.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol,td ol,th ol{list-style:none;margin:0;padding:0}.behave ol li.step,td ol li.step,th ol li.step{padding:3px 3px 3px 18px;margin:5px 0 5px 5px}.behave ol li,td ol li,th ol li{margin:0 0 0 1em;padding:0 0 0 .2em}.behave ol li span.param,td ol li span.param,th ol li span.param{font-weight:bold}.behave ol li.failed,td ol li.failed,th ol li.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave ol li.passed,td ol li.passed,th ol li.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave ol li.skipped,td ol li.skipped,th ol li.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol li.pending,td ol li.pending,th ol li.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.undefined,td ol li.undefined,th ol li.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.message,td ol li.message,th ol li.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011;margin-left:10px}.behave #summary,td #summary,th #summary{margin:0;padding:5px 10px;text-align:right;top:0;right:0;float:right}.behave #summary p,td #summary p,th #summary p{margin:0 0 0 2px}.behave #summary #totals,td #summary #totals,th #summary #totals{font-size:1.2em}.behave .scenario h3.failed,td .scenario h3.failed,th .scenario h3.failed,.background h3.failed{background:#c20000}.behave #behave-header.failed,td #behave-header.failed,th #behave-header.failed{background:#c20000}.behave .scenario h3.undefined,td .scenario h3.undefined,th .scenario h3.undefined,.background h3.undefined{background:#faf834;color:black}.behave #behave-header.undefined,td #behave-header.undefined,th #behave-header.undefined{background:#faf834;color:black}#behave-header.failed a{color:white}pre{white-space:pre-wrap}
+ --></style><script type="text/javascript"><!--
+ function Collapsible_toggle(id){var elem=document.getElementById(id);elem.style.display=(elem.style.display=='none'?'block':'none');return false;};function Collapsible_expandAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='block';}};function Collapsible_collapseAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='none';}};function Collapsible_expandAllFailed(){var elems=document.getElementsByClassName('failed');for(var i=0;i<elems.length;i++){var elem=elems[i];if(elem.nodeName=='H3'){elem.parentElement.getElementsByTagName('ol')[0].style.display='block';}}}
+---></script></head><body><div class="behave"><div id="behave-header"><div id="label"><h1>Behave Test Report</h1></div><div id="summary"><p id="totals"><p id="feature_totals">Features: passed: 1</p><p id="scenario_totals">Scenarios: passed: 2</p><p id="step_totals">Steps: passed: 5, untested: 4</p></p><p id="duration">Finished in 43.1 seconds</p><div id="expand-collapse"><a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a><span> | </span><a id="collapser" href="#" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a><span> | </span><a id="failed_expander" href="#" onclick="Collapsible_expandAllFailed()">Expand All Failed</a></div></div></div><div class="feature"><h2><span class="val">Feature: We want to check the search functionality on elefant</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/search.feature:3</span><h3 onclick="Collapsible_toggle('scenario_0')"><span class="val">Scenario: Check if user can explore the products using the filters from elefant homepage</span></h3><ol class="scenario_steps" id="scenario_0"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(3.454s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user select books from category menu</span><small class="step_duration">(0.755s)</small></div><div class="step_file"><span>steps/home_page_steps.py:25</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user select fiction from genres</span><small class="step_duration">(0.687s)</small></div><div class="step_file"><span>steps/home_page_steps.py:30</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Filters page: The user select 15% - 30% from discount</span><small class="step_duration">(11.082s)</small></div><div class="step_file"><span>steps/filters_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Filters page: The user should receive a list with at least 1000 products</span><small class="step_duration">(0.190s)</small></div><div class="step_file"><span>steps/filters_page_steps.py:9</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search.feature:17</span><h3 onclick="Collapsible_toggle('scenario_1')"><span class="val">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.1 </span></h3><ol class="scenario_steps" id="scenario_1"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(5.566s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>Home page: The user types in the search bar "</span><b>Cartea Rosie</b><span>"</span></span><small class="step_duration">(0.078s)</small></div><div class="step_file"><span>steps/home_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks the search button</span><small class="step_duration">(0.551s)</small></div><div class="step_file"><span>steps/home_page_steps.py:40</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Search page: The user should receive as the first result the searched product</span><small class="step_duration">(0.773s)</small></div><div class="step_file"><span>steps/search_page_steps.py:4</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search.feature:18</span><h3 onclick="Collapsible_toggle('scenario_2')"><span class="val">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.2 </span></h3><ol class="scenario_steps" id="scenario_2"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(5.490s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>Home page: The user types in the search bar "</span><b>Alchimistul</b><span>"</span></span><small class="step_duration">(0.087s)</small></div><div class="step_file"><span>steps/home_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks the search button</span><small class="step_duration">(0.478s)</small></div><div class="step_file"><span>steps/home_page_steps.py:40</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Search page: The user should receive as the first result the searched product</span><small class="step_duration">(0.573s)</small></div><div class="step_file"><span>steps/search_page_steps.py:4</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search.feature:19</span><h3 onclick="Collapsible_toggle('scenario_3')"><span class="val">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.3 </span></h3><ol class="scenario_steps" id="scenario_3"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(5.499s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>Home page: The user types in the search bar "</span><b>Crima si pedeapsa</b><span>"</span></span><small class="step_duration">(0.120s)</small></div><div class="step_file"><span>steps/home_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks the search button</span><small class="step_duration">(0.481s)</small></div><div class="step_file"><span>steps/home_page_steps.py:40</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Search page: The user should receive as the first result the searched product</span><small class="step_duration">(0.651s)</small></div><div class="step_file"><span>steps/search_page_steps.py:4</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search.feature:20</span><h3 onclick="Collapsible_toggle('scenario_4')"><span class="val">Scenario Outline: Check if user can make a simple search from the elefant home page -- @1.4 </span></h3><ol class="scenario_steps" id="scenario_4"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(5.488s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>Home page: The user types in the search bar "</span><b>Moara cu noroc</b><span>"</span></span><small class="step_duration">(0.115s)</small></div><div class="step_file"><span>steps/home_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks the search button</span><small class="step_duration">(0.483s)</small></div><div class="step_file"><span>steps/home_page_steps.py:40</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Search page: The user should receive as the first result the searched product</span><small class="step_duration">(0.534s)</small></div><div class="step_file"><span>steps/search_page_steps.py:4</span></div><span class="embed" /></li></ol><span /></div></div></body></html>
+\ No newline at end of file
++--></script></head><body><div class="behave"><div id="behave-header"><div id="label"><h1>Behave Test Report</h1></div><div id="summary"><p id="totals"><p id="feature_totals">Features: passed: 1</p><p id="scenario_totals">Scenarios: passed: 2</p><p id="step_totals">Steps: passed: 14</p></p><p id="duration">Finished in 35.1 seconds</p><div id="expand-collapse"><a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a><span> | </span><a id="collapser" href="#" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a><span> | </span><a id="failed_expander" href="#" onclick="Collapsible_expandAllFailed()">Expand All Failed</a></div></div></div><div class="feature"><h2><span class="val">Feature: We want to check the account deletion functionality on elefant</span></h2><span /></div><div class="background"><h3><span class="val">Background: </span></h3><ol /><span /></div><div class="scenario"><span class="scenario_file">features/delete_account.feature:6</span><h3 onclick="Collapsible_toggle('scenario_0')"><span class="val">Scenario: Check that the user can delete their account</span></h3><ol class="scenario_steps" id="scenario_0"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">A valid account exists</span><small class="step_duration">(0.000s)</small></div><div class="step_file"><span>steps/login_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(1.719s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks on account button</span><small class="step_duration">(0.301s)</small></div><div class="step_file"><span>steps/home_page_steps.py:10</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks on login page button</span><small class="step_duration">(7.539s)</small></div><div class="step_file"><span>steps/home_page_steps.py:15</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Login page: The user login with a valid account</span><small class="step_duration">(0.378s)</small></div><div class="step_file"><span>steps/login_page_steps.py:43</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Login page: The user clicks on login button</span><small class="step_duration">(1.047s)</small></div><div class="step_file"><span>steps/login_page_steps.py:25</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Account page: The user clicks on delete account</span><small class="step_duration">(0.299s)</small></div><div class="step_file"><span>steps/account_page_steps.py:24</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Account page: The user clicks on confirm delete account</span><small class="step_duration">(7.884s)</small></div><div class="step_file"><span>steps/account_page_steps.py:29</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Home page: The user should receive a confirmation for deactivating the account</span><small class="step_duration">(0.015s)</small></div><div class="step_file"><span>steps/home_page_steps.py:45</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/delete_account.feature:17</span><h3 onclick="Collapsible_toggle('scenario_1')"><span class="val">Scenario: Check that the user's account has been deleted</span></h3><ol class="scenario_steps" id="scenario_1"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">A valid account exists</span><small class="step_duration">(0.000s)</small></div><div class="step_file"><span>steps/login_page_steps.py:35</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">Home page: The user is on elefant home page</span><small class="step_duration">(5.431s)</small></div><div class="step_file"><span>steps/home_page_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks on account button</span><small class="step_duration">(0.094s)</small></div><div class="step_file"><span>steps/home_page_steps.py:10</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Home page: The user clicks on login page button</span><small class="step_duration">(7.455s)</small></div><div class="step_file"><span>steps/home_page_steps.py:15</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Login page: The user tries to login with the deleted account</span><small class="step_duration">(0.411s)</small></div><div class="step_file"><span>steps/login_page_steps.py:49</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">Login page: The user clicks on login button</span><small class="step_duration">(2.452s)</small></div><div class="step_file"><span>steps/login_page_steps.py:25</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">Login page: The user should receive a message for invalid credentials</span><small class="step_duration">(0.065s)</small></div><div class="step_file"><span>steps/login_page_steps.py:30</span></div><span class="embed" /></li></ol><span /></div></div></body></html>
+\ No newline at end of file
+Index: .idea/BDD_Proiect_Final_Elefant.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/BDD_Proiect_Final_Elefant.iml b/.idea/BDD_Proiect_Final_Elefant.iml
+new file mode 100644
+--- /dev/null	(date 1681298681906)
++++ b/.idea/BDD_Proiect_Final_Elefant.iml	(date 1681298681906)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.11 (BDD_Proiect_Final_Elefant) (2)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
