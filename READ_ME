@@ -66,3 +66,4 @@ Astfel, scenariile de test ce au trecut vor fi marcate cu verde, iar cele ce au 
 
     În situația în care unul dintre teste va eșua, scenariul va eșua de asemenea. Pentru a vedea care dintre pași a eșuat, putem da click 
 pe scenariul cu roșu/pasul cu rosu, sau din colțul dreapta sus, putem selecta una din opțiunile: Expand All sau Expand All Failed în funcție de necesitate.
+De asemenea, pentru a afișa mai multe detalii despre unul din pașii care au eșuat, putem da click pe “Error Message”.
