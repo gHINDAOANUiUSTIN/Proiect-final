@@ -1,6 +1,6 @@
-Înainte de a începe rularea testelor, este necesar să pregătim sistemul, instalând toate programele și librăriile necesare. 
-* Menționez că instucțiunile de rulare pentru testele proiectului BDD 
-sunt concepute doar pentru sistemele Windows pe 64 de biți!
+Înainte de a începe rularea testelor, este necesar să pregătim sistemul, instalând toate programele și librăriile necesare.
+
+* Menționez că instucțiunile de rulare pentru testele proiectului BDD sunt concepute doar pentru sistemele Windows pe 64 de biți!
 
 Primul pas constă în instalarea:
 1. Google Chrome
@@ -19,7 +19,8 @@ git clone https://github.com/gHINDAOANUiUSTIN/Proiect-final.git
 
     * Înainte de clonarea proiectului, recomand selectarea unui director în care vor fi copiate fișierele. 
 Această operație poate fi realizată prin comada:
-cd ”Calea\catre\proiectul\BDD” (ex: cd "C:\User\Iustin\Documents)
+cd ”Calea\catre\proiectul\BDD” 
+(ex: cd "C:\User\Iustin\Documents)
 
     După clonarea proiectului, pentru ca sistemul să permită rularea testelor și generarea rapoartelor în format html, 
 sunt necesare următoarele librării: behave, behave-html-formatter, selenium și webdriver-manager. 
@@ -33,6 +34,8 @@ pip install -r requirements.txt
 
 ! IMPORTANT: Testele functionalității de ștergere a contului pot fi rulate în limita numărului de conturi valide din fișierul 
 valid_accounts.py, care se actualizează după fiecare testare.
+
+COMENZI RULARE:
 
  I) Comandă rulare teste pentru funcționalitatea login-logout:
 python -m behave features/login.feature -f html -o behave-report.html
