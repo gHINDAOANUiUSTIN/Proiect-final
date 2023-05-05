@@ -1,62 +1,65 @@
-MENTIONAM CA ACESTE TESTE RULEAZA PE SISTEMELE WINDOWS PE 64 DE BITI. DE ASEMENEA, ESTE IMPORTANT SA VERIFICATI
-DACA VERSIUNILE FOLOSITE ATAT DE PYTHON CAT SI ALE LIBRARIILOR NECESARE SUNT COMPATIBILE CU SISTEMUL UTILIZAT
-Intructiuni pentru pregatirea sistemului Windows inainte de rularea testelor:
+Înainte de a începe rularea testelor, este necesar să pregătim sistemul, instalând toate programele și librăriile necesare. 
+* Menționez că instucțiunile de rulare pentru testele proiectului BDD 
+sunt concepute doar pentru sistemele Windows pe 64 de biți!
 
--> Asigura-te ca ai instalat:
-
- 1) Google Chrome
+Primul pas constă în instalarea:
+1. Google Chrome
 https://www.google.com/chrome/thank-you.html?brand=YTUH&statcb=1&installdataindex=empty&defaultbrowser=0
 
- 2) Python 3.11.2
+2. Python ~= 3.11.2
 https://www.python.org/downloads/
-    Optiuni instalare aditionale necesare:
-    * Add python.exe to PATH
+    Opțiuni instalare adiționale necesare:
+        * Add python.exe to PATH
 
- 3) PowerShell-7.3.3-win-x64.zip:
-https://github.com/PowerShell/PowerShell/releases/download/v7.3.3/PowerShell-7.3.3-win-x64.msi
-    Optiuni instalare aditionale necesare:
-    * Add PowerShell to Path Envirnoment Variable
-    * Enable PowerShell remoting
+3. Git  (link tutorial instalare și configurare GitHub)
+https://www.youtube.com/watch?v=-HNWBZGs4EA&t=775s
 
- 4) Pachetele/librariile necesare (dependentele):
+    După instalarea Git, proiectul se poate clona folosind următoarea comandă în terminalul Git Bash:
+git clone https://github.com/gHINDAOANUiUSTIN/Proiect-final.git
 
-    # Pentru instalarea librariilor, vom folosi urmatoarele comenzi in terminalul PowerShell 7:
+    * Înainte de clonarea proiectului, recomand selectarea unui director în care vor fi copiate fișierele. 
+Această operație poate fi realizată prin comada:
+cd ”Calea\catre\proiectul\BDD” (ex: cd "C:\User\Iustin\Documents)
 
-      > behave
-pip install behave~=1.2.6
+    După clonarea proiectului, pentru ca sistemul să permită rularea testelor și generarea rapoartelor în format html, 
+sunt necesare următoarele librării: behave, behave-html-formatter, selenium și webdriver-manager. 
 
-      > behave-html-formatter
-pip install behave-html-formatter~=0.9.10
+    Pentru a instalara pachetul de librării este necesar să navigăm către directorul în care se află fișierele copiate 
+ex: cd "C:\User\Iustin\Documents\Proiect-final și să introducem următoarea comandă în terminal:
+pip install -r requirements.txt
 
-      > selenium~=4.8.2
-pip install selenium~=4.8.2
+    După instalarea librăriilor totul este pregătit pentru rularea testelor, folosind una din comenzile menționate 
+în secțiunea ”comenzi rulare” în funcție de funcționalitatea care se dorește a fi testată.
 
-      >webdriver-manager~=3.8.5
-pip install webdriver-manager==3.8.5
+! IMPORTANT: Testele functionalității de ștergere a contului pot fi rulate în limita numărului de conturi valide din fișierul 
+valid_accounts.py, care se actualizează după fiecare testare.
 
-Intsructiuni rulare teste si generare raport:
-
-->Deschide terminalul PowerShell 7
-->Navighează la directorul unde se află proiectul BDD folosind comanda cd "Calea\catre\proiectul\BDD".
-Exemplu: cd "C:\User\Iustin\Documents\BDD_Proiect_Final_Elefant"
-->Dupa validarea directorului, introdu una din urmatoarele comenzi de rulare:
-
-IMPORTANT: Dupa rularea testelor functionalitatii de stergere a contului, tesetele pentru functionalitatea de login/logout
-           vor esua, deoarece user-ul si parola folosite pentru logare vor fi sterse
-
-OBSERVATIE: Dupa rularea testelor, pentru a vedea raportul generat se va folosi comanda
-start behave-report.html
-   - Aceasta comanda va deschide raportul in software-ul prestabilit de sistem (de regula browser-ul implicit)
-
-Comenzi rulare:
- I) Comanda rulare teste pentru functionalitatea login-logout
+ I) Comandă rulare teste pentru funcționalitatea login-logout:
 python -m behave features/login.feature -f html -o behave-report.html
 
- II) Comanda rulare teste pentru functionalitatea de cautare
+ II) Comandă rulare teste pentru funcționalitatea de căutare:
 python -m behave features/search.feature -f html -o behave-report.html
 
- III) Comanda rulare teste pentru functionalitatea cosului de cumparaturi
+ III) Comandă rulare teste pentru funcționalitatea coșului de cumpărături:
 python -m behave features/cart.feature -f html -o behave-report.html
 
- IV) Comanda rulare teste pentru functionalitatea de stergere a contului
+ IV) Comandă rulare teste pentru funcționalitatea de ștergere a contului:
 python -m behave features/delete_account.feature -f html -o behave-report.html
+
+    După finalizarea testelor unei funcționalități, vom putea observa în terminal câteva informații 
+succinte despre situația raportului înainte de a îl deschide (numărul de funcționalități, de scenarii 
+și de pași care au trecut, peste care s-a sărit, sau care au eșuat). 
+
+    După rularea scenariilor aferente uneia dintre funcționalități, raportul generat poate fi vizualizat utilizând comanda:
+start behave-report.html
+   - Această comandă va deschide raportul în software-ul prestabilit de sistem (de regulă browser-ul implicit).
+
+    După rularea scenariilor aferente uneia dintre funcționalități, raportul generat poate fi vizualizat utilizând comanda:
+start behave-report.html
+   - Această comandă va deschide raportul în software-ul prestabilit de sistem (de regulă browser-ul implicit).
+
+    În raportul generat, vom avea culori pentru a identifica rapid testele ce au trecut și cele ce au eșuat. 
+Astfel, scenariile de test ce au trecut vor fi marcate cu verde, iar cele ce au eșuat vor fi marcate cu roșu.
+
+    În situația în care unul dintre teste va eșua, scenariul va eșua de asemenea. Pentru a vedea care dintre pași a eșuat, putem da click 
+pe scenariul cu roșu/pasul cu rosu, sau din colțul dreapta sus, putem selecta una din opțiunile: Expand All sau Expand All Failed în funcție de necesitate.
